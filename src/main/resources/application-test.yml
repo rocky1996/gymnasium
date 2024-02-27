@@ -1,0 +1,46 @@
+server:
+  port: 8051
+
+spring:
+  profiles: test
+  max_result_window: 100000
+
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+
+  datasource:
+    username: root
+    password: 6mmm$201207
+    url: jdbc:mysql://127.0.0.1:3306/gymnasium?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    type: org.springframework.jdbc.datasource.DriverManagerDataSource
+    dbcp2:
+      min-idle: 10
+      initial-size: 10
+      max-wait-millis: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: false
+      pool-prepared-statements: true
+      remove-abandoned-on-borrow: true
+      remove-abandoned-on-maintenance: true
+      connection-init-sqls: set names utf8mb4
+
+    jpa:
+      hibernate:
+        ddl-auto: none
+        naming:
+          physical-strategy:  org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: true
+
+logging:
+    level:
+      com:
+        example:
+          blogBigDataSystem:
+            mapper : debug

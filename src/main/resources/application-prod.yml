@@ -1,0 +1,23 @@
+server:
+  port: 8052
+
+spring:
+  profiles: prod
+
+#  servlet:
+#    multipart:
+#      max-file-size: 1024MB
+#      max-request-size: 1024MB
+#
+#    jpa:
+#      hibernate:
+#        ddl-auto: none
+#        naming:
+#          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#      show-sql: true
+#logging:
+#  level:
+#    com:
+#      example:
+#        blogBigDataSystem:
+#          mapper : debug

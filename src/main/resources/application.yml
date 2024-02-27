@@ -1,0 +1,14 @@
+server:
+  port: 8050
+
+#指定环境,http://wjhsh.net/songjn-p-13354564.html
+spring:
+  profiles:
+    active: test
+
+  main:
+    allow-bean-definition-overriding: true
+
+##配置日志
+#logging:
+#  config: classpath:logback-boot.xml
